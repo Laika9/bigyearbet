@@ -1,3 +1,5 @@
+<!-- This is the code for the login functionality -->
+
 <?php
 
 $conn = mysql_connect("mysql4.mylogin.ie", "laika1986", "Thesuburbs09");
