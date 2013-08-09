@@ -5,8 +5,30 @@
 
 $conn = mysql_connect("mysql4.mylogin.ie", "laika1986", "Thesuburbs09");
 
+if(mysql_ping($conn)){
+	
+	echo "Server Connected<br/>";
+}
+
+else{
+	
+	echo "Server not Connected";
+}
+
+
+
 $db_name="RG323912_bigyearbet"; // Database name 
-$tbl_name = "tbl_user";
+
+if($db_name){
+	
+	echo "Database Connected<br/>";
+}
+else{
+	
+	echo "Database not Connected";
+}
+
+$tbl_name = "";
 
 $myusername=$_POST['myusername']; 
 $mypassword=$_POST['mypassword']; 
@@ -23,8 +45,8 @@ $mypassword=$_POST['mypassword'];
 
 
 //WHERE user_name='$myusername' and password='$mypassword'
-$result=mysql_query('SELECT * FROM $tbl_name');
-var_dump($result);
+$result=mysql_query('SELECT * FROM tbl_user');
+echo $result;
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
