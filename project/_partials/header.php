@@ -14,7 +14,7 @@
 				<input type="text" name="myusername" id="myusername"/><br />
 				<label>Password</label>
 				<input type="text" name="mypassword" id="mypassword"/>
-				<button id="login-button" type="submit"></button>
+				<button id="login-button" type="submit">Login</button>
 			</form>
 		</div>
 		
