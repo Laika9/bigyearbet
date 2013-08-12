@@ -2,21 +2,7 @@
 
 function connect() {
 	global $pdo;
-	$pdo = new PDO("mysql:host=localhost;dbname=sakila", "root", "root");
-}
-
-function get_actors_by_last_name( $letter ) {
-	global $pdo;
-	
-	$stmt = $pdo->prepare('
-		SELECT actor_id, first_name, last_name
-		FROM actor 
-		WHERE last_name LIKE :letter
-		LIMIT 50');
-
-	$stmt->execute( array( ':letter' => $letter . '%' ) );	
-	
-	return $stmt->fetchAll( PDO::FETCH_OBJ );
+	$pdo = new PDO("mysql:host=mysql4.mylogin.ie;dbname=rg323912_bigyearbet", "laika1986", "Thesuburbs09");
 }
 
 
